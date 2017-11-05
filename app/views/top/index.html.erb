@@ -1,13 +1,13 @@
-  <ul>
-    <li><a href="#">Achieve</a></li>
-    <li><a href="#">トップページ</a></li>
-    <li><a href="#">お問い合わせ</a></li>
-    <li><a href="#">ブログ</a></li>
-  </ul>
+
 </header>
   <section class="main-header">
+    <p class="flash"><%= notice %></p>
     <img src="<%= asset_path "achieve.png" %>">
   </section>
+  <div id="page-top-btn" class="page-top-btn">
+    <p><a class="move-page-top" id="move-page-top">▲</a></p>
+</div>
+  
 <section class="about">
   <h1>About Achieve</h1>
   <p>
@@ -50,6 +50,9 @@
       </div>
     </div>
   </section>
+  
+
+  
 <footer>
   <p>運営会社DIVE INTO CODE株式会社</p>
   <p>© 2015-2016 Copyright DIVE INTO CODE Corp.</p>

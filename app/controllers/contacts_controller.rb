@@ -4,6 +4,10 @@ class ContactsController < ApplicationController
   end
 
   def new
+   @contact = Contact.new
+  end
+  
+  def new
     if params[:back]
       @contact = Contact.new(contacts_params)
     else
@@ -14,7 +18,7 @@ class ContactsController < ApplicationController
   def create
     @contact = Contact.new(contacts_params)
     if @contact.save
-      redirect_to contacts_path, notice: "お問い合わせありがとうございました！"
+      redirect_to top_index_path, notice: "お問い合わせありがとうございました！"
     else
       render 'new'
     end
