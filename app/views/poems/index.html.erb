@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 col-sm-12">
+      <h1>ポエム 一覧</h1>
+    </div>
+    <div class="col-md-offset-3 col-md-6 col-sm-12">
+      <table class="table table-condensed">
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>Content</th>
+            <th colspan="2"></th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <% @poems.each do |poem| %>
+            <tr>
+              <td><%= poem.title %></td>
+              <td><%= poem.content %></td>
+              <td><%= link_to "詳細", poem, class: 'btn btn-default btn-sm btn-success' %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,12 @@
+<p id="notice"><%= notice %></p>
+ <h1>ポエム</h1>
+  <p class="lead">
+    <strong>Title:</strong>
+    <%= @poems.title %>
+  </p>
+
+  <p class="lead">
+    <strong>Content:</strong>
+    <%= @poems.content %>
+  </p>
+<%= link_to 'back', poems_path %>
