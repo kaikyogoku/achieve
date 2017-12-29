@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  
+  resources :blogs, only: [:index]  
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   devise_for :users
   get 'top/index'
