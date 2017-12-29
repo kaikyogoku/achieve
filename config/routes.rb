@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   devise_for :users
   get 'top/index'
-resources :poems, only: [:index, :show]
+resources :poems, only: [:index]
 resources :blogs, only: [:index, :new, :create, :edit, :update ,:destroy] do
 
 collection do
